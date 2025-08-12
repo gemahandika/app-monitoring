@@ -1,0 +1,32 @@
+app/config
+public/.htaccess
+vendor
+
+# Umum
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Folder Dependency
+/vendor/
+
+# File Konfigurasi Lokal / Rahasia
+.env
+.env.* 
+
+# Composer
+composer.lock
+
+# Sistem Operasi
+node_modules/
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Cache
+cache/
+tmp/

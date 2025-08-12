@@ -1,0 +1,72 @@
+.select2-container {
+  z-index: 9999 !important;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.bg-cantik {
+   background-color: #45a091; /* warna saat hover */
+}
+.button-cantik:hover {
+     background-color: rgb(42, 114, 127);
+}
+.bg-card {
+  background-color: rgb(13, 95, 110);
+   /* pink lembut misalnya */
+}
+.bg-ungu {
+  background-color: rgb(25, 65, 83);
+   /* pink lembut misalnya */
+}
+.bg-button1 {
+  background-color: rgb(56, 146, 219);
+   /* pink lembut misalnya */
+}
+.button1-hover:hover {
+    background-color: rgb(35, 89, 160);
+}
+
+.bg-print {
+  background-color: rgb(26, 13, 88);
+   /* pink lembut misalnya */
+}
+.print-hover:hover {
+    background-color: rgb(50, 38, 161);
+}
+.bg-yellowslow {
+  background-color: rgb(247, 239, 167);
+   /* pink lembut misalnya */
+}
+
+.select2-container--default .select2-selection--single {
+  height: 38px !important;
+  line-height: 1.5;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+}
+
+.select2-selection__rendered {
+  line-height: 24px !important;
+}
+
+.select2-selection__arrow {
+  height: 38px !important;
+}
+
+.dataTables_wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+table.dataTable td,
+table.dataTable th {
+  white-space: nowrap;
+}
+
+th, td {
+  vertical-align: middle;
+}
+
+ 
