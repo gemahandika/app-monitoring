@@ -90,16 +90,18 @@ Flasher::loginFlash(); // Tampilkan pesan jika ada
                             </div>
                             Armada Masuk
                         </a>
-                        <a class="nav-link" href="<?= BASE_URL; ?>/bongkar_muat">
-                            <div class="sb-nav-link-icon"><i class="fas fa-truck-loading"></i>
-                            </div>
-                            Bongkar Muat
-                        </a>
-                        <a class="nav-link" href="<?= BASE_URL; ?>/report">
-                            <div class="sb-nav-link-icon"><i class="fas fa-database"></i>
-                            </div>
-                            Report
-                        </a>
+                        <?php if ($_SESSION['role'] !== 'security') : ?>
+                            <a class="nav-link" href="<?= BASE_URL; ?>/bongkar_muat">
+                                <div class="sb-nav-link-icon"><i class="fas fa-truck-loading"></i>
+                                </div>
+                                Bongkar Muat
+                            </a>
+                            <a class="nav-link" href="<?= BASE_URL; ?>/report">
+                                <div class="sb-nav-link-icon"><i class="fas fa-database"></i>
+                                </div>
+                                Report
+                            </a>
+                        <?php endif; ?>
                         <?php if (isset($data['userRole']) && in_array($data['userRole'], ['superadmin'])) : ?>
                             <a class="nav-link" href="<?= BASE_URL; ?>/user">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
