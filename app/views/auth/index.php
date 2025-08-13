@@ -10,7 +10,7 @@ Flasher::loginFlash(); // Tampilkan pesan jika ada
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Monitoring</title>
-    <link rel="shortcut icon" href="<?= BASE_URL; ?>/img/it.png">
+    <link rel="shortcut icon" href="<?= BASE_URL; ?>/img/armada.png">
 
     <!-- Bootstrap CSS (gunakan versi stabil saja satu kali) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -23,12 +23,12 @@ Flasher::loginFlash(); // Tampilkan pesan jika ada
 </head>
 
 
-<body class="bg-success" style="background-image: url('<?php echo BASE_URL; ?>/img/baground.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body class="bg-light" style="background-image: url('<?php echo BASE_URL; ?>/img/baground.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <!-- Konten lainnya -->
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card p-4 shadow-lg" style="width: 350px;">
             <div class="text-center">
-                <img src="<?= BASE_URL; ?>/img/login.png"
+                <img src="<?= BASE_URL; ?>/img/armada.png"
                     alt="Twitter Logo" width="90">
                 <h6 class="mt-2 fw-bold" style="border-bottom: 1px solid black;">MONITORING ARMADA</h6>
                 <?php Flasher::loginFlash(); ?>

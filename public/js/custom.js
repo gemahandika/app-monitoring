@@ -33,12 +33,21 @@ $(document).ready(function () {
   // ========================================
   // 2. INISIALISASI SELECT2
   // ========================================
-  $('.select2').select2({
-        placeholder: 'Pilih Cabang',
-        allowClear: true,
-        width: '100%', // penting agar lebar penuh
-         dropdownParent: $('#modalTambahUser')
-    });
+  // Untuk modal tambah user
+  $('#cabang').select2({
+      placeholder: 'Pilih Cabang',
+      allowClear: true,
+      width: '100%',
+      dropdownParent: $('#modalTambahUser')
+  });
+
+  // Untuk modal edit user
+  $('#cabang-edit').select2({
+      placeholder: 'Pilih Cabang',
+      allowClear: true,
+      width: '100%',
+      dropdownParent: $('#modalEdit')
+  });
 
 
   // ========================================
@@ -397,6 +406,47 @@ $(document).ready(function () {
     window.location.href = BASE_URL + '/report/downloadReport?start=' + start + '&end=' + end;
   });
 
+
+
+  // Tombol Edit User
+    $(document).on('click', '.btn-editUser', function () {
+        $('.modal').modal('hide');
+
+        const id = $(this).data('id');
+        const username = $(this).data('user');
+        const name = $(this).data('name');
+        const cabang = $(this).data('cabang');
+        const custid = $(this).data('custid');
+        const role = $(this).data('role');
+        const status = $(this).data('status');
+
+        $('#edit-id').val(id);
+        $('#edit-username').val(username);
+        $('#edit-name').val(name);
+        $('#edit-custid').val(custid);
+        $('#edit-role').val(role);
+        $('#edit-status').val(status);
+        $('#cabang-edit').val(cabang).trigger('change');
+
+        const modal = new bootstrap.Modal(document.getElementById('modalEdit'));
+        modal.show();
+    });
+
+
+    $(document).on('click', '.btn-editPass', function () {
+        $('.modal').modal('hide');
+
+        const id = $(this).data('id');
+        const username = $(this).data('username');
+        // const pass = $(this).data('pass');
+
+        $('#edit-id-pass').val(id);
+        $('#usernamePass').val(username);
+        $('#edit-pass').val(''); // (lihat catatan keamanan di bawah)
+
+        const modal = new bootstrap.Modal(document.getElementById('modalEditPass'));
+        modal.show();
+    });
 
 
 });

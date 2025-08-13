@@ -13,7 +13,7 @@ Flasher::loginFlash(); // Tampilkan pesan jika ada
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Monitoring <?= $judul ?></title>
-    <link rel="shortcut icon" href="<?= BASE_URL; ?>/img/it.png">
+    <link rel="shortcut icon" href="<?= BASE_URL; ?>/img/armada.png">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="<?= BASE_URL; ?>/css/style.css" rel="stylesheet" />
     <link href="<?= BASE_URL; ?>/css/custom.css?v=1.2" rel="stylesheet" />

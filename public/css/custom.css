@@ -15,6 +15,10 @@ body {
   background-color: rgb(13, 95, 110);
    /* pink lembut misalnya */
 }
+.button-card:hover {
+  background-color: rgb(8, 56, 65);
+   /* pink lembut misalnya */
+}
 .bg-ungu {
   background-color: rgb(25, 65, 83);
    /* pink lembut misalnya */
