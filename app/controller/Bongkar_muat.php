@@ -8,6 +8,11 @@ class Bongkar_muat extends Controller
             header('Location: ' . BASE_URL . '/auth');
             exit;
         }
+        // Batasi akses untuk role 'security'
+        if ($_SESSION['role'] === 'security') {
+            header('Location: ' . BASE_URL . '/armada_masuk');
+            exit;
+        }
     }
     public function index()
     {

@@ -9,7 +9,7 @@ class User extends Controller
             header('Location: ' . BASE_URL . '/auth');
             exit;
         }
-        if (!isset($_SESSION['role']) || !in_array($_SESSION['role'], ['superadmin', 'admin'])) {
+        if (!isset($_SESSION['role']) || !in_array($_SESSION['role'], ['superadmin'])) {
             header('Location: ' . BASE_URL . '/home');
             exit;
         }
