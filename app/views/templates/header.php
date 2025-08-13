@@ -77,11 +77,14 @@ Flasher::loginFlash(); // Tampilkan pesan jika ada
                     <div class="nav">
                         <span class="nav-link mb-4" style="border-bottom: solid 1px white;"><img src="<?= BASE_URL; ?>/img/user.png" alt="JNE Logo" style="height: 30px;" class="me-2"> <?= htmlspecialchars($name) ?></span>
 
-                        <a class="nav-link" href="<?= BASE_URL; ?>">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i>
-                            </div>
-                            Dashboard
-                        </a>
+                        <?php if ($_SESSION['role'] !== 'security') : ?>
+                            <a class="nav-link" href="<?= BASE_URL; ?>">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                Dashboard
+                            </a>
+                        <?php endif; ?>
+
                         <a class="nav-link" href="<?= BASE_URL; ?>/armada_masuk">
                             <div class="sb-nav-link-icon"><i class="fas fa-car-alt"></i>
                             </div>

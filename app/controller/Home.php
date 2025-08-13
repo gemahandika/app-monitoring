@@ -14,6 +14,12 @@ class Home extends Controller
             header('Location: ' . BASE_URL . '/auth');
             exit;
         }
+        // Batasi akses untuk role 'security'
+        if ($_SESSION['role'] === 'security') {
+            header('Location: ' . BASE_URL . '/armada_masuk');
+            exit;
+        }
+
 
         $data['judul'] = 'Home';
         $data['userRole'] = $_SESSION['role'];

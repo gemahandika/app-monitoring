@@ -66,8 +66,26 @@ class Auth
         $_SESSION['role'] = $user['role'];
         $_SESSION['name'] = $user['name'];
         $_SESSION['cabang'] = $user['cabang'];
+
         Flasher::setLoginFlash('Login berhasil sebagai ' . $user['role'], 'success');
-        header('Location: ' . BASE_URL . '/home');
+
+        // Redirect sesuai role
+        switch ($user['role']) {
+            case 'admin':
+                $redirect = '/home';
+                break;
+            case 'user':
+                $redirect = '/home';
+                break;
+            case 'security':
+                $redirect = '/armada_masuk';
+                break;
+            default:
+                $redirect = '/home';
+                break;
+        }
+
+        header('Location: ' . BASE_URL . $redirect);
         exit;
     }
 

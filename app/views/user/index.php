@@ -115,7 +115,8 @@
                        <div class="row">
                            <div class="col-md-6 mb-3">
                                <label for="role" class="form-label fw-bold">Role</label>
-                               <select type="text" class="form-control" name="role" id="role" required>
+                               <select type="text" class="form-select" name="role" id="role" required>
+                                   <option value="security">SECURITY</option>
                                    <option value="user">USER</option>
                                    <option value="admin">ADMIN</option>
                                </select>
@@ -165,7 +166,7 @@
                            <div class="col-md-6 mb-3">
                                <label for="edit-role" class="form-label fw-bold">Role</label>
                                <select type="text" class="form-select" name="edit-role" id="edit-role" required>
-                                   <option value="agen">AGEN</option>
+                                   <option value="security">SECURITY</option>
                                    <option value="user">USER</option>
                                    <?php if (isset($data['userRole']) && in_array($data['userRole'], ['superadmin'])) : ?>
                                        <option value="admin">ADMIN</option>
