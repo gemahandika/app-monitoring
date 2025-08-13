@@ -75,7 +75,7 @@ class Auth
                 $redirect = '/home';
                 break;
             case 'user':
-                $redirect = '/home';
+                $redirect = '/bongkar_muat';
                 break;
             case 'security':
                 $redirect = '/armada_masuk';

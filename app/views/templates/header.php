@@ -84,12 +84,13 @@ Flasher::loginFlash(); // Tampilkan pesan jika ada
                                 Dashboard
                             </a>
                         <?php endif; ?>
-
-                        <a class="nav-link" href="<?= BASE_URL; ?>/armada_masuk">
-                            <div class="sb-nav-link-icon"><i class="fas fa-car-alt"></i>
-                            </div>
-                            Armada Masuk
-                        </a>
+                        <?php if ($_SESSION['role'] !== 'user') : ?>
+                            <a class="nav-link" href="<?= BASE_URL; ?>/armada_masuk">
+                                <div class="sb-nav-link-icon"><i class="fas fa-car-alt"></i>
+                                </div>
+                                Armada Masuk
+                            </a>
+                        <?php endif; ?>
                         <?php if ($_SESSION['role'] !== 'security') : ?>
                             <a class="nav-link" href="<?= BASE_URL; ?>/bongkar_muat">
                                 <div class="sb-nav-link-icon"><i class="fas fa-truck-loading"></i>

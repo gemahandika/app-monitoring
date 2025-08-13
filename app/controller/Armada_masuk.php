@@ -8,6 +8,11 @@ class Armada_masuk extends Controller
             header('Location: ' . BASE_URL . '/auth');
             exit;
         }
+        // Batasi akses untuk role 'security'
+        if ($_SESSION['role'] === 'user') {
+            header('Location: ' . BASE_URL . '/bongkar_muat');
+            exit;
+        }
     }
     public function index()
     {
